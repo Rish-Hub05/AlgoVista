@@ -76,23 +76,33 @@ function QuickSortVisualizer({ array }) {
     if (!current.action) return 'Ready to start Quick Sort';
     
     switch (current.action) {
+      case 'start':
+        return 'Starting Quick Sort algorithm - preparing to sort the array';
       case 'pivot':
-        return 'Selecting pivot element - choosing a reference point for partitioning';
-      case 'partition':
-        return 'Partitioning array around pivot - elements < pivot go left, > pivot go right';
+        return `Selecting pivot element: ${current.array[current.comparing[0]]} - this will be our reference point for partitioning`;
+      case 'partition-start':
+        return `Starting partition around pivot ${current.array[current.comparing[0]]} - elements < pivot go left, >= pivot go right`;
       case 'compare':
-        return `Comparing element with pivot to determine placement`;
-      case 'swap':
-        return 'Swapping elements to maintain partition order';
+        return `Comparing element with pivot to determine placement in partition`;
       case 'less':
-        return 'Element is less than pivot - placing in left partition';
+        return 'Element is less than pivot - will be placed in left partition';
       case 'greater':
-        return 'Element is greater than pivot - placing in right partition';
+        return 'Element is greater than or equal to pivot - will be placed in right partition';
+      case 'swap':
+        return 'Swapping elements to maintain proper partition order';
+      case 'pivot-swap':
+        return 'Placing pivot in its final sorted position';
+      case 'pivot-placed':
+        return 'Pivot is now in its final sorted position - this element is now sorted';
       case 'done':
-        return 'Quick Sort completed! Array is now sorted';
+        return '🎉 Quick Sort completed! Array is now fully sorted';
       default:
         return current.description || 'Processing...';
     }
+  };
+
+  const getProgressPercentage = () => {
+    return steps.length > 0 ? ((currentStep + 1) / steps.length) * 100 : 0;
   };
 
   return (
@@ -118,6 +128,13 @@ function QuickSortVisualizer({ array }) {
           <p><strong>Space Complexity:</strong> O(log n) - recursion stack space</p>
           <p><strong>Stability:</strong> Unstable - may change relative order of equal elements</p>
           <p><strong>Strategy:</strong> Partition-based - uses pivot to divide and conquer</p>
+        </div>
+
+        <div className="progress-bar">
+          <div 
+            className="progress-fill" 
+            style={{ width: `${getProgressPercentage()}%` }}
+          ></div>
         </div>
 
         <div className="buttons">
@@ -157,13 +174,19 @@ function QuickSortVisualizer({ array }) {
                   ? 'swapping'
                   : current.action === 'pivot'
                     ? 'pivot'
-                    : current.action === 'partition'
-                      ? 'partitioning'
-                      : current.action === 'less'
-                        ? 'less-than-pivot'
-                        : current.action === 'greater'
-                          ? 'greater-than-pivot'
-                          : 'comparing'
+                    : current.action === 'pivot-swap'
+                      ? 'pivot-swap'
+                      : current.action === 'pivot-placed'
+                        ? 'pivot'
+                        : current.action === 'partition-start'
+                          ? 'partitioning'
+                          : current.action === 'less'
+                            ? 'less-than-pivot'
+                            : current.action === 'greater'
+                              ? 'greater-than-pivot'
+                              : current.action === 'compare'
+                                ? 'comparing'
+                                : ''
                 : current.action === 'done'
                   ? 'sorted'
                   : ''

@@ -126,35 +126,3 @@
   color: #333;
   font-weight: bold;
 }
-
-.algorithm-info {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 8px;
-  border-left: 4px solid #007bff;
-  margin-bottom: 1rem;
-}
-
-.algorithm-info h3 {
-  margin: 0 0 0.5rem 0;
-  color: #007bff;
-  font-size: 1.3rem;
-}
-
-.algorithm-info p {
-  margin: 0.5rem 0;
-  color: #495057;
-  font-size: 0.95rem;
-}
-
-.algorithm-info ul {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
-  color: #495057;
-  font-size: 0.9rem;
-}
-
-.algorithm-info li {
-  margin: 0.2rem 0;
-}
