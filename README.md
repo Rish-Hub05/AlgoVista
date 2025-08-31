@@ -204,12 +204,12 @@ We welcome contributions! Here's how you can help:
 
 ---
 
-<div align="center">
+## 👨‍💻 Author
 
-### 💫 **Made with ❤️ for the programming community**
+**Rishabh Choraria**  
+📍 IIIT Nagpur  
+🔗 GitHub: [@Rish-Hub05](https://github.com/Rish-Hub05)
 
-**⭐ Star this repo if you found it helpful!**
+---
 
-[🔝 **Back to Top**](#-algovista)
 
-</div>
