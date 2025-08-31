@@ -56,7 +56,6 @@
   background-color: #999;
   cursor: not-allowed;
 }
-/* Already existing styles stay the same */
 
 .highlight {
   background-color: orange !important;
@@ -92,23 +91,19 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Comparing state */
 .comparing {
   background-color: orange !important;
 }
 
-/* Swapping state */
 .swapping {
   background-color: crimson !important;
   transform: scale(1.1) rotate(3deg);
 }
 
-/* Sorted state (final frame) */
 .sorted {
   background-color: green !important;
 }
 
-/* Optional shake effect */
 @keyframes shake {
   0% { transform: translateX(0); }
   25% { transform: translateX(-3px); }

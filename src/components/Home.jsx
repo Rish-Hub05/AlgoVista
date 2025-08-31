@@ -1,9 +1,15 @@
 // src/components/Home.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function Home({ onVisualize }) {
+function Home({ onVisualize, algorithm: preselectedAlgorithm }) {
   const [input, setInput] = useState('');
-  const [algorithm, setAlgorithm] = useState('bubble');
+  const [algorithm, setAlgorithm] = useState(preselectedAlgorithm || 'bubble');
+
+  useEffect(() => {
+    if (preselectedAlgorithm) {
+      setAlgorithm(preselectedAlgorithm);
+    }
+  }, [preselectedAlgorithm]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

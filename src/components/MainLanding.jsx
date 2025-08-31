@@ -25,7 +25,11 @@ const MainLanding = ({ onNavigate }) => {
           className="section-card sorting-section" 
           onClick={handleSortingClick}
         >
-          <span className="card-icon">🔄</span>
+          <div className="card-icon-container">
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M3 6h18M7 12h10M10 18h4"/>
+            </svg>
+          </div>
           <h2>Sorting Algorithms</h2>
           <p>
             Explore and visualize various sorting algorithms with step-by-step animations
@@ -45,7 +49,15 @@ const MainLanding = ({ onNavigate }) => {
           className="section-card tree-section" 
           onClick={handleTreeClick}
         >
-          <span className="card-icon">🌳</span>
+          <div className="card-icon-container">
+            <svg className="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="6" r="3"/>
+              <path d="M12 9v6"/>
+              <circle cx="8" cy="18" r="3"/>
+              <circle cx="16" cy="18" r="3"/>
+              <path d="M8 15l4-3 4 3"/>
+            </svg>
+          </div>
           <h2>Tree Structures</h2>
           <p>
             Understand tree data structures through interactive visualizations
