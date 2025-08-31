@@ -11,7 +11,7 @@
 
 *Learn algorithms through interactive visualizations and step-by-step animations*
 
-[🚀 **Live Demo**](#) • [📖 **Documentation**](#features) • [🐛 **Report Bug**](../../issues) • [💡 **Request Feature**](../../issues)
+ • [📖 **Documentation**](#features) • [🐛 **Report Bug**](../../issues) • [💡 **Request Feature**](../../issues)
 
 </div>
 
@@ -183,22 +183,6 @@ We welcome contributions! Here's how you can help:
 
 ---
 
-## 📸 **Screenshots**
-
-<div align="center">
-
-### 🏠 **Landing Page**
-*Clean, intuitive interface with algorithm categories*
-
-### 🔄 **Sorting Visualization**
-*Step-by-step sorting algorithm animation*
-
-### 🌳 **Tree Structures**
-*Interactive tree building and traversal*
-
-</div>
-
----
 
 ## 🗺️ **Roadmap**
 
@@ -208,12 +192,6 @@ We welcome contributions! Here's how you can help:
 - [ ] 🎓 **Educational Quizzes**
 - [ ] 🌐 **Multi-language Support**
 - [ ] 📊 **Advanced Analytics**
-
----
-
-## 📄 **License**
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
